@@ -1,0 +1,21 @@
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  background-color: var(--color-gray-500);
+  font-family: 'Fira Code', monospace, 'Courier New', monospace;
+  color: #333;
+  line-height: 1.5;
+  height: 100vh;
+  font-size: 1.6rem;
+  letter-spacing: -0.02em;
+}
+
+#root {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+}

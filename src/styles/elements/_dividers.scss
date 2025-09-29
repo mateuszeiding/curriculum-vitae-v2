@@ -1,0 +1,32 @@
+@use './../config/colors' as color;
+
+.v-divider {
+  width: 1px;
+  margin: 4px 0;
+  padding: 0;
+  flex: 0 1 auto;
+  background-color: color.$blue-500;
+}
+
+hr {
+  border: 1px solid transparent;
+  border-bottom: 1px solid color.$blue-500;
+  width: 100%;
+  position: absolute;
+  z-index: 0;
+
+  // This could be done better hmm...
+  margin: 1.2rem;
+  width: calc(100% - 1rem);
+
+  &.multi {
+    width: calc(100% - 2.2rem);
+  }
+}
+
+@media print {
+  hr {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+}

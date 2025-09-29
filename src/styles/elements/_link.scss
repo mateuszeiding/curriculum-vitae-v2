@@ -1,0 +1,12 @@
+@use './../config/colors' as color;
+
+a[href] {
+  color: color.$gray-000;
+  text-decoration-color: color.$gray-000;
+  text-underline-offset: 4px;
+
+  &:hover {
+    color: color.$blue-500;
+    text-decoration-color: color.$blue-500;
+  }
+}

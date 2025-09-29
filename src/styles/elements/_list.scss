@@ -1,0 +1,21 @@
+@use './../config/colors' as color;
+
+ul,
+ol {
+  list-style: none;
+  padding: 0.5rem 0;
+  margin: 0;
+
+  li {
+    position: relative;
+    font-size: 1.2rem;
+    padding: 0.25rem 0 0.25rem 1rem;
+
+    &::before {
+      position: absolute;
+      content: '\2022';
+      color: color.$blue-500;
+      left: 0;
+    }
+  }
+}
