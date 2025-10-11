@@ -1,13 +1,24 @@
 @use './../mixins/media-query' as media-query;
 
-$columns: 6;
+$columns: 10;
 
 .container {
   margin: auto auto;
   width: 210mm;
   height: 297mm;
-  padding: 3.5rem;
   box-sizing: border-box;
+
+  & > .row > [class*='col-'] {
+    padding: 3.5rem 1.2rem;
+
+    &:first-child {
+      padding-left: 3.5rem;
+      padding-right: 3.5rem;
+    }
+    &:last-child {
+      padding-right: 3.5rem;
+    }
+  }
 }
 
 @include media-query.sm() {

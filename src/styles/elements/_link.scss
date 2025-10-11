@@ -1,12 +1,12 @@
 @use './../config/colors' as color;
 
 a[href] {
-  color: color.$gray-000;
-  text-decoration-color: color.$gray-000;
+  --link-color: var(--color-gray-000);
+  color: var(--link-color);
+  text-decoration-color: var(--link-color);
   text-underline-offset: 4px;
 
   &:hover {
-    color: color.$blue-500;
-    text-decoration-color: color.$blue-500;
+    --link-color: var(--color-blue-000);
   }
 }

@@ -5,8 +5,16 @@
   "compilerOptions": {
     "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
 
+    "lib": ["ES2021", "DOM", "DOM.Iterable"],
+    "baseUrl": ".",
+
     "paths": {
-      "@/*": ["./src/*"]
+      "@assets/*": ["src/assets/*"],
+      "@data/*": ["src/data/*"],
+      "@components/*": ["src/components/*"],
+      "@sections/*": ["src/sections/*"],
+      "@models/*": ["src/data/models/*"],
+      "@util/*": ["src/util/*"]
     }
   }
 }

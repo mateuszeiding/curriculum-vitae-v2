@@ -1,9 +1,30 @@
 @use 'sass:map';
 @use 'sass:color';
+@use 'sass:meta';
 
-$gray-900: #f8f8ff;
+$gray-000: #f8f8ff;
 $gray-500: #8c8caa;
-$gray-000: #333333;
+$gray-900: #333333;
+
+$blue-900: #1e3c52;
+$blue-500: #2c5977;
+$blue-000: #c7d6e2;
+
+$green-900: #3f5e4c;
+$green-500: #5e8a73;
+$green-000: #c0d1c4;
+
+$red-900: #6b2330;
+$red-500: #8e4a58;
+$red-000: #e3c6cb;
+
+$gold-900: #6f614b;
+$gold-500: #b8a45b;
+$gold-000: #e7debf;
+
+$purple-900: #43305a;
+$purple-500: #6b5b8d;
+$purple-000: #c9beda;
 
 $grays: (
   gray-900: $gray-900,
@@ -11,13 +32,35 @@ $grays: (
   gray-000: $gray-000,
 );
 
-$blue-500: #0067a5;
-
 $blues: (
+  blue-900: $blue-900,
   blue-500: $blue-500,
+  blue-000: $blue-000,
 );
 
-$colors: map.merge($grays, $blues);
+$greens: (
+  green-900: $green-900,
+  green-500: $green-500,
+  green-000: $green-000,
+);
+
+$reds: (
+  red-900: $red-900,
+  red-500: $red-500,
+  red-000: $red-000,
+);
+
+$golds: (
+  gold-900: $gold-900,
+  gold-500: $gold-500,
+  gold-000: $gold-000,
+);
+
+$purples: (
+  purple-900: $purple-900,
+  purple-500: $purple-500,
+  purple-000: $purple-000,
+);
 
 @function hex-to-rgb($color) {
   @return rgb(
@@ -27,6 +70,18 @@ $colors: map.merge($grays, $blues);
   );
 }
 
+@function map-merge-all($maps...) {
+  $out: ();
+  @each $m in $maps {
+    @if $m != null and meta.type-of($m) == 'map' {
+      $out: map.merge($out, $m);
+    }
+  }
+  @return $out;
+}
+
+$colors: map-merge-all($grays, $blues, $greens, $reds, $golds, $purples);
+
 :root {
   @each $name, $color in $colors {
     --color-#{$name}: #{$color};
@@ -35,17 +90,18 @@ $colors: map.merge($grays, $blues);
   --color-skeleton-primary: #{rgba(hex-to-rgb($gray-500), 0.1)};
   --color-skeleton-secondary: #{rgba(hex-to-rgb($blue-500), 0.1)};
 
-  --color-paper-bg: #{$gray-900};
+  --color-paper-bg: #{$gray-000};
 
   @media print {
-    // It would decrease use of ink if we use white background
-    // we assume that we can save arount 100000$ per year by doing this
     --color-paper-bg: white;
   }
 }
 
 @each $name, $color in $colors {
   .tx-#{$name} {
+    color: var(--color-#{$name});
+  }
+  .bg-#{$name} {
     color: var(--color-#{$name});
   }
 }

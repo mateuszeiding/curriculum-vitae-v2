@@ -1,0 +1,14 @@
+:root {
+  --border-color: var(--color-gray-000);
+  --list-symbol-color: var(--color-gray-500);
+
+  $palettes: 'gray', 'gold', 'red', 'blue', 'green', 'purple';
+
+  @each $p in $palettes {
+    $name: unquote($p);
+    &[data-palette='#{$name}'] {
+      --list-symbol-color: var(--color-#{$name}-500);
+      --personal-info-bg-color: var(--color-#{$name}-500);
+    }
+  }
+}
