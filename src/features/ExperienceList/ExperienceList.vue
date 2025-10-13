@@ -26,11 +26,11 @@ onMounted(async () => {
 
     <div class="border-end py-5 d-flex flex-column gap-2 pe-4">
       <div v-for="exp in experience" :key="exp.project">
-        <div class="d-flex justify-content-between">
+        <div class="d-flex justify-content-between align-items-center">
           <h3 class="fs-md">{{ exp.project }}</h3>
+          <!-- Yes, I know, this separator is beautiful, I'm not proud of it tho -->
           <div class="d-flex fs-xs">
-            <!-- Yes, I know, this separator is beautiful, I'm not proud of it tho -->
-            <div>{{ exp.techStack.join('&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;') }}</div>
+            {{ exp.techStack.join('&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;') }}
           </div>
         </div>
         <div class="fs-xs">{{ exp.description }}</div>
