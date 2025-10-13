@@ -25,9 +25,17 @@ onMounted(async () => {
         <div class="position border-bottom">Software Engineer</div>
       </div>
     </div>
-    <div class="border-end py-4">
-      <div v-for="exp in experience" :key="exp.position">
-        <ul>
+    <div class="border-end py-4 d-flex flex-column gap-4">
+      <div v-for="exp in experience" :key="exp.project">
+        <div class="d-flex justify-content-between pe-4">
+          <h3 class="fs-md">{{ exp.project }}</h3>
+          <div class="d-flex fs-xs">
+            <!-- Yes, I know, this separator is beautiful, I'm not proud of it tho -->
+            <div>{{ exp.techStack.join('&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;') }}</div>
+          </div>
+        </div>
+        <div class="fs-xs">{{ exp.description }}</div>
+        <ul class="py-2">
           <li v-for="bulletPoint in exp.bulletPoints" :key="bulletPoint.value">
             <EmphasizeText :bullet-point />
           </li>
@@ -36,7 +44,7 @@ onMounted(async () => {
     </div>
 
     <div class="text-end">
-      <div class="position border-end border-bottom">Trainee Engineer</div>
+      <div class="position border-end border-bottom">Junior Software Engineer</div>
     </div>
   </div>
 </template>

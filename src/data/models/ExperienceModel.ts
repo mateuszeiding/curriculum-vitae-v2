@@ -1,17 +1,15 @@
 export class ExperienceModel {
-  position: string = ''
-  company: string = ''
-  startDate: Date | null = new Date()
-  endDate?: Date = new Date()
-  bulletPoints: {
-    value: string
-    emphasis?: string[]
-  }[] = []
+  project: string = ''
+  description: string = ''
+  bulletPoints: BulletPointModel[] = []
+  techStack: TechStack[] = []
 
   public constructor(obj: Partial<ExperienceModel>) {
     Object.assign(this, obj)
   }
 }
+
+type TechStack = '.NET' | 'React' | 'Vue' | 'Angular' | 'WebComponents'
 
 export class BulletPointModel {
   public value: string = ''

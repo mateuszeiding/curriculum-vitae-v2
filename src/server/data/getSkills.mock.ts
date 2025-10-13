@@ -12,7 +12,7 @@ export const getSkills: SkillGroupModel[] = [
       {
         name: 'UI',
         level: 3,
-        list: ['Scss', 'Figma', 'Design System'],
+        list: ['Scss', 'Figma', 'Bootstrap'],
       },
       {
         name: 'Vue',
