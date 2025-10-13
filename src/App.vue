@@ -7,16 +7,17 @@ import MyLinks from '@components/MyLinks.vue'
 
 <template>
   <main class="container bg-paper d-flex flex-column">
-    <!-- <ResumeHeader /> -->
     <div class="row h-100">
-      <div class="col-4 d-flex flex-column row-gap-6 border-end border-w-2 personal-info">
+      <aside
+        class="col-lg-4 col-sm-10 d-flex flex-column row-gap-6 border-end border-w-2 personal-info"
+      >
         <PersonalInfo />
         <SkillList />
-      </div>
-      <div class="col-6 d-flex flex-column">
+      </aside>
+      <section class="col-lg-6 col-sm-10 d-flex flex-column">
         <ExperienceList class="flex-grow-1" />
         <MyLinks />
-      </div>
+      </section>
     </div>
   </main>
 </template>

@@ -2,12 +2,17 @@ import type { SkillGroupModel } from '@data/models/SkillModel'
 
 export const getSkills: SkillGroupModel[] = [
   {
-    name: 'UI Development',
+    name: 'Frontend Development',
     skills: [
       {
-        name: 'React.js',
+        name: 'React',
         level: 3,
-        list: ['React Router', 'React Query', 'Tanstack Form', 'usehooks-ts'],
+        list: ['React Router', 'React Query', 'TanStack Form', 'usehooks-ts'],
+      },
+      {
+        name: 'UI',
+        level: 3,
+        list: ['Scss', 'Figma', 'Design System'],
       },
       {
         name: 'Vue',
@@ -17,7 +22,7 @@ export const getSkills: SkillGroupModel[] = [
       {
         name: 'Angular 12+',
         level: 1,
-        list: ['Vue Router'],
+        list: [],
       },
       {
         name: 'Web Components',
@@ -32,7 +37,12 @@ export const getSkills: SkillGroupModel[] = [
       {
         name: '.NET',
         level: 2,
-        list: ['Entity Framework', 'LINQ', 'CQRS', 'Repository pattern', 'REST API'],
+        list: ['Entity Framework', 'LINQ', 'Swagger', 'CQRS', 'Repository pattern', 'REST API'],
+      },
+      {
+        name: 'Database',
+        level: 1,
+        list: ['MSSQL'],
       },
     ],
   },
@@ -40,28 +50,30 @@ export const getSkills: SkillGroupModel[] = [
     name: 'Tools',
     skills: [
       {
-        name: 'Tools',
-        list: [
-          'Git',
-          'Azure DevOps',
-          'Figma',
-          'ESLint',
-          'SonarQube',
-          'MSW',
-          'Vim motions',
-          'Docker',
-          'Swagger',
-          'NPM Registry',
-          'Biome.js',
-        ],
+        name: 'Infrastructure',
+        list: ['AzureDevOps', 'Docker', 'CI/CD', 'Module Federation', 'Nx'],
+      },
+      {
+        name: 'Static Analysis',
+        list: ['ESLint', 'Prettier', 'SonarQube', 'Biome.js'],
       },
       {
         name: 'Testing',
-        list: ['MSW', 'Vitest', 'Jest', 'StoryBook', 'testing-library', 'Postman', 'NUnit'],
+        list: ['MSW', 'Vitest/Jest', 'StoryBook', 'testing-library', 'NUnit'],
       },
       {
-        name: 'Bundlers',
+        name: 'Build',
         list: ['Webpack', 'Vite'],
+      },
+    ],
+  },
+  {
+    name: 'Certificates',
+    skills: [
+      {
+        name: 'Professional Scrum Master 1',
+        list: [],
+        link: 'https://www.credly.com/badges/175db99c-c1be-4ecd-a6c4-e6d8f4738d55',
       },
     ],
   },

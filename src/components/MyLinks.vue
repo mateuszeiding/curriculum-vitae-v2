@@ -37,7 +37,7 @@ const links: Link[] = [
 const imgHeight = Number.parseFloat(getComputedStyle(document.documentElement).fontSize) * 1.6
 </script>
 <template>
-  <div class="fs-xs d-flex flex-row gap-4 justify-content-end">
+  <div class="fs-xs d-flex flex-row gap-4 justify-content-end pt-6">
     <div v-for="l in links" :key="l.text">
       <a :href="l.href" target="_blank" className="d-flex align-items-center" rel="noreferrer">
         <img :height="imgHeight" :alt="l.imgAlt" :src="l.imgSrc" />

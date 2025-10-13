@@ -3,6 +3,7 @@ export class SkillModel {
   list: string[] = []
   icon?: string
   level?: 0 | 1 | 2 | 3 = 0
+  link?: string
 
   constructor(obj: Partial<SkillModel>) {
     Object.assign(this, obj)

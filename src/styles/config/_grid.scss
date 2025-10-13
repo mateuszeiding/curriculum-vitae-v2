@@ -7,6 +7,7 @@ $columns: 10;
   width: 210mm;
   height: 297mm;
   box-sizing: border-box;
+  padding: 0 1.2rem;
 
   & > .row > [class*='col-'] {
     padding: 3.5rem 1.2rem;

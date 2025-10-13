@@ -1,11 +1,17 @@
+@use 'sass:string' as string;
+
 :root {
-  --border-color: var(--color-gray-000);
-  --list-symbol-color: var(--color-gray-500);
+  aside {
+    --border-color: var(--color-gray-000);
+  }
+  section {
+    --border-color: var(--color-gray-900);
+  }
 
   $palettes: 'gray', 'gold', 'red', 'blue', 'green', 'purple';
 
   @each $p in $palettes {
-    $name: unquote($p);
+    $name: string.unquote($p);
     &[data-palette='#{$name}'] {
       --list-symbol-color: var(--color-#{$name}-500);
       --personal-info-bg-color: var(--color-#{$name}-500);
