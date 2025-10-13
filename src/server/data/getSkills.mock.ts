@@ -12,7 +12,7 @@ export const getSkills: SkillGroupModel[] = [
       {
         name: 'UI',
         level: 3,
-        list: ['Scss', 'Figma', 'Bootstrap'],
+        list: ['Scss', 'Figma', 'Bootstrap', 'a11y'],
       },
       {
         name: 'Vue',
@@ -50,8 +50,8 @@ export const getSkills: SkillGroupModel[] = [
     name: 'Tools',
     skills: [
       {
-        name: 'Infrastructure',
-        list: ['AzureDevOps', 'Docker', 'CI/CD', 'Module Federation', 'Nx'],
+        name: 'Workflow',
+        list: ['Azure DevOps', 'Docker', 'CI/CD', 'Webpack', 'Vite', 'Git'],
       },
       {
         name: 'Static Analysis',
@@ -60,10 +60,6 @@ export const getSkills: SkillGroupModel[] = [
       {
         name: 'Testing',
         list: ['MSW', 'Vitest/Jest', 'StoryBook', 'testing-library', 'NUnit'],
-      },
-      {
-        name: 'Build',
-        list: ['Webpack', 'Vite'],
       },
     ],
   },

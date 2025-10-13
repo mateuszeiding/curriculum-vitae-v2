@@ -28,10 +28,10 @@ export const getExperience: ExperienceModel[] = [
         to improve code quality and consistency`,
       },
       {
-        value: `Helped design interns understand how layout and spacing decisions affect implementation`,
+        value: `Ensured alignment between design and frontend during implementation`,
       },
       {
-        value: `Ensured alignment between design and frontend during implementation`,
+        value: `Helped design interns understand how layout and spacing decisions affect implementation`,
       },
     ],
   },
@@ -85,11 +85,9 @@ export const getExperience: ExperienceModel[] = [
         with the PO and designer`,
       },
       {
-        value: `Refactored the existing codebase to simplify state flow using React Router Data
-        APIs and reduce prop drilling`,
-      },
-      {
-        value: `Reduced total code size by ~30%, improving stability and long-term maintainability`,
+        value: `Refactored the existing codebase to simplify state flow using React Router
+        Data APIs and reduce prop drilling, resulting in ~30% less code and improved
+        long-term maintainability`,
       },
     ],
   },

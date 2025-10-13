@@ -24,7 +24,7 @@ onMounted(async () => {
       <div class="position border-bottom">Software Engineer</div>
     </div>
 
-    <div class="border-end py-4 d-flex flex-column gap-2 pe-4">
+    <div class="border-end py-5 d-flex flex-column gap-2 pe-4">
       <div v-for="exp in experience" :key="exp.project">
         <div class="d-flex justify-content-between">
           <h3 class="fs-md">{{ exp.project }}</h3>
