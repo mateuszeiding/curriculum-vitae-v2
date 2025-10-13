@@ -1,6 +1,6 @@
 @use './../mixins/media-query' as media-query;
 
-$columns: 10;
+$columns: 12;
 
 .container {
   margin: auto auto;
@@ -10,14 +10,14 @@ $columns: 10;
   padding: 0 1.2rem;
 
   & > .row > [class*='col-'] {
-    padding: 3.5rem 1.2rem;
+    padding: 2rem 1.2rem;
 
     &:first-child {
-      padding-left: 3.5rem;
-      padding-right: 3.5rem;
+      padding-left: 2rem;
+      padding-right: 2rem;
     }
     &:last-child {
-      padding-right: 3.5rem;
+      padding-right: 2rem;
     }
   }
 }

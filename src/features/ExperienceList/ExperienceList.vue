@@ -16,18 +16,17 @@ onMounted(async () => {
 </script>
 <template>
   <div>
-    <div>
-      <div className=" d-flex justify-content-between align-items-end">
-        <div class="uppercase">
-          <div class="fs-xl fw-medium">TietoEvry</div>
-          <div>07/2021 - Current</div>
-        </div>
-        <div class="position border-bottom">Software Engineer</div>
+    <div className=" d-flex justify-content-between align-items-end">
+      <div class="uppercase">
+        <div class="fs-xl fw-medium">TietoEvry</div>
+        <div>07/2021 - Current</div>
       </div>
+      <div class="position border-bottom">Software Engineer</div>
     </div>
-    <div class="border-end py-4 d-flex flex-column gap-4">
+
+    <div class="border-end py-4 d-flex flex-column gap-2 pe-4">
       <div v-for="exp in experience" :key="exp.project">
-        <div class="d-flex justify-content-between pe-4">
+        <div class="d-flex justify-content-between">
           <h3 class="fs-md">{{ exp.project }}</h3>
           <div class="d-flex fs-xs">
             <!-- Yes, I know, this separator is beautiful, I'm not proud of it tho -->

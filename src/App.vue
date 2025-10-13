@@ -14,7 +14,7 @@ import MyLinks from '@components/MyLinks.vue'
         <PersonalInfo />
         <SkillList />
       </aside>
-      <section class="col-lg-6 col-sm-10 d-flex flex-column">
+      <section class="col-lg-8 col-sm-10 d-flex flex-column">
         <ExperienceList class="flex-grow-1" />
         <MyLinks />
       </section>
