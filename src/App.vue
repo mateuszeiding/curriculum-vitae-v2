@@ -9,12 +9,12 @@ import MyLinks from '@components/MyLinks.vue'
   <main class="container bg-paper d-flex flex-column">
     <div class="row h-100">
       <aside
-        class="col-lg-4 col-sm-10 d-flex flex-column row-gap-6 border-end border-w-2 personal-info"
+        class="col-lg-4 col-sm-12 d-flex flex-column row-gap-6 border-end border-w-2 personal-info"
       >
         <PersonalInfo />
         <SkillList />
       </aside>
-      <section class="col-lg-8 col-sm-10 d-flex flex-column">
+      <section class="col-lg-8 col-sm-12 d-flex flex-column">
         <ExperienceList class="flex-grow-1" />
         <MyLinks />
       </section>
