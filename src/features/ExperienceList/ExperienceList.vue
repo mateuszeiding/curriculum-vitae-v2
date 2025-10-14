@@ -18,7 +18,7 @@ onMounted(async () => {
   <div>
     <div className=" d-flex justify-content-between align-items-end">
       <div class="uppercase">
-        <div class="fs-xl fw-medium">TietoEvry</div>
+        <div class="fs-xxl fw-medium">TietoEvry</div>
         <div>07/2021 - Current</div>
       </div>
       <div class="position border-bottom">Software Engineer</div>
