@@ -11,10 +11,13 @@ const phone = personalInfo.phone
       <div className="uppercase fw-medium fs-xxl">{{ personalInfo.name }}</div>
       <div>{{ personalInfo.location }}</div>
     </div>
-    <a className="fw-medium fs-xs" :href="email && `mailto:${email}`">{{ personalInfo.email }}</a>
+    <a v-if="email" className="fw-medium fs-xs" :href="`mailto:${email}`">{{
+      personalInfo.email
+    }}</a>
     <a
+      v-if="phone"
       className="uppercase fw-medium fs-xs"
-      :href="phone && `tel:${phone.replaceAll(' ', '').replaceAll('-', '')}`"
+      :href="`tel:${phone.replaceAll(' ', '').replaceAll('-', '')}`"
       >{{ personalInfo.phone }}</a
     >
   </div>
