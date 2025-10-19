@@ -14,6 +14,10 @@ import MyLinks from '@components/MyLinks.vue'
       </aside>
       <section class="col-lg-8 col-sm-12 d-flex flex-column">
         <ExperienceList class="flex-grow-1" />
+        <div class="ps-9 tx-gray-500 d-flex flex-column">
+          <div class="ps-8 lh-1 fs-xxs">Links</div>
+          <div class="ps-8 lh-1.25">&#x21A9;</div>
+        </div>
         <MyLinks />
       </section>
     </div>
