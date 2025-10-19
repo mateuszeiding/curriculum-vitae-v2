@@ -55,7 +55,7 @@ export const getExperience: ExperienceModel[] = [
     ],
   },
   {
-    project: 'Authz Admin',
+    project: 'Authorization Administration',
     techStack: ['Vue', '.NET'],
     description: `System for managing users, roles, permissions and organizational structure,
     integrated with a legacy application.`,

@@ -2,6 +2,7 @@
 import github from '@assets/github-dark.png'
 import linkedin from '@assets/linkedin.png'
 import vercel from '@assets/vercel-dark.png'
+import old from '@assets/old.png'
 
 type Link = {
   href: string
@@ -26,9 +27,16 @@ const links: Link[] = [
     href: 'https://github.com/mateuszeiding/',
   },
   {
-    text: 'Resume as App',
+    text: 'Resume',
     imgAlt: 'Resume as a web application',
     imgSrc: vercel,
+    alignment: 'end',
+    href: 'https://mateusz-eiding.dev/',
+  },
+  {
+    text: 'OLD Resume',
+    imgAlt: 'OLD Resume as a web application',
+    imgSrc: old,
     alignment: 'end',
     href: 'https://mateusz-eiding-cv.vercel.app/',
   },
