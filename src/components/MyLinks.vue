@@ -45,11 +45,32 @@ const links: Link[] = [
 const imgHeight = Number.parseFloat(getComputedStyle(document.documentElement).fontSize) * 1.6
 </script>
 <template>
-  <div class="fs-xs d-flex flex-row gap-4 justify-content-start">
-    <div v-for="l in links" :key="l.text">
-      <a :href="l.href" target="_blank" className="d-flex align-items-center" rel="noreferrer">
-        <img :height="imgHeight" :alt="l.imgAlt" :src="l.imgSrc" />
-      </a>
+  <div>
+    <div class="ps-9 tx-gray-500 d-flex flex-column">
+      <div class="ps-8 lh-1 fs-xxs">Links</div>
+      <div class="ps-7">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="34"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M12 4 C 12 8, 9 10, 6 13" />
+          <path d="M6 13 L9 13 M6 13 L6 10" />
+        </svg>
+      </div>
+    </div>
+    <div class="fs-xs d-flex flex-row gap-4 justify-content-start">
+      <div v-for="l in links" :key="l.text">
+        <a :href="l.href" target="_blank" className="d-flex align-items-center" rel="noreferrer">
+          <img :height="imgHeight" :alt="l.imgAlt" :src="l.imgSrc" />
+        </a>
+      </div>
     </div>
   </div>
 </template>
