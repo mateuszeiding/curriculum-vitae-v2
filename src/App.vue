@@ -3,6 +3,7 @@ import PersonalInfo from './features/PersonalInfo.vue'
 import SkillList from './features/SkillList.vue'
 import ExperienceList from './features/ExperienceList/ExperienceList.vue'
 import MyLinks from '@components/MyLinks.vue'
+import { Analytics } from '@vercel/analytics/nuxt'
 </script>
 
 <template>
@@ -18,6 +19,7 @@ import MyLinks from '@components/MyLinks.vue'
       </section>
     </div>
   </main>
+  <Analytics />
 </template>
 <style lang="scss">
 .personal-info {
