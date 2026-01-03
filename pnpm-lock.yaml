@@ -17,6 +17,9 @@ importers:
       vue:
         specifier: ^3.5.22
         version: 3.5.22(typescript@5.9.2)
+      vue-to-print:
+        specifier: ^1.5.1
+        version: 1.5.1(vue@3.5.22(typescript@5.9.2))
     devDependencies:
       '@prettier/plugin-oxc':
         specifier: ^0.0.4
@@ -2112,6 +2115,11 @@ packages:
     peerDependencies:
       eslint: ^8.57.0 || ^9.0.0
 
+  vue-to-print@1.5.1:
+    resolution: {integrity: sha512-Z8LeXBmw9J5zQrtcqNQeoFNprgs6ituih682SAOv06ExZljvIjt2CEAW7N1XAjLpgzx9LKMrl500G2ZeGugLUg==}
+    peerDependencies:
+      vue: ^3.0.0
+
   vue-tsc@3.1.0:
     resolution: {integrity: sha512-fbMynMG7kXSnqZTRBSCh9ROYaVpXfCZbEO0gY3lqOjLbp361uuS88n6BDajiUriDIF+SGLWoinjvf6stS2J3Gg==}
     hasBin: true
@@ -4107,6 +4115,10 @@ snapshots:
       semver: 7.7.2
     transitivePeerDependencies:
       - supports-color
+
+  vue-to-print@1.5.1(vue@3.5.22(typescript@5.9.2)):
+    dependencies:
+      vue: 3.5.22(typescript@5.9.2)
 
   vue-tsc@3.1.0(typescript@5.9.2):
     dependencies:
