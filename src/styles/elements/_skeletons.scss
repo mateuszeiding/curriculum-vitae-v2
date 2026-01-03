@@ -4,13 +4,18 @@
 .skeleton {
   display: inline-block;
   border-radius: 0.2rem;
-  height: 1em;
+  height: 1lh;
+  font-size: inherit;
+  line-height: inherit;
   width: 100%;
   position: relative;
   overflow: hidden;
   background-color: rgba(var(--color-skeleton-bg), 0.1);
+  content: '\00a0';
 
   &::after {
+    font-size: inherit;
+    line-height: inherit;
     position: absolute;
     top: 0;
     right: 0;
@@ -25,7 +30,7 @@
       rgba(var(--color-skeleton), 0)
     );
     animation: shimmer var(--skeleton-animation-duration) infinite;
-    content: '';
+    content: '\00a0';
   }
 
   @keyframes shimmer {

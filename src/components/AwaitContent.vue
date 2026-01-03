@@ -39,7 +39,6 @@ watchEffect(
 )
 </script>
 <template>
-  <!-- <component :is="props.skeleton" /> -->
   <component :is="props.content" v-if="data" v-bind="data" />
   <component :is="props.skeleton" v-else />
 </template>
