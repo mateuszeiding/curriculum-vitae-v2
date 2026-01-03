@@ -5,7 +5,7 @@ import type { ExperienceModel } from '@data/models/ExperienceModel'
 import ExperienceListContent from './ExperienceListContent.vue'
 import ExperienceListSkeleton from './ExperienceListSkeleton.vue'
 
-const api = new API()
+const api = API.Instance
 const dataSource: Record<keyof PropsOf<typeof ExperienceListContent>, MaybePromise<unknown>> = {
   experience: api.get<ExperienceModel[]>('experience/list'),
 }

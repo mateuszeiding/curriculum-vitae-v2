@@ -5,7 +5,7 @@ import SkillListContent from './SkillListContent.vue'
 import SkillListSkeleton from './SkillListSkeleton.vue'
 import { API } from '@data/API'
 
-const api = new API()
+const api = API.Instance
 const dataSource: Record<keyof PropsOf<typeof SkillListContent>, MaybePromise<unknown>> = {
   groups: api.get<SkillGroupModel[]>('skill/list'),
 }

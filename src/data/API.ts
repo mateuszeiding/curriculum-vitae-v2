@@ -4,6 +4,15 @@ export type UrlPath = 'skill/list' | 'experience/list'
 
 export class API {
   private readonly __baseUrl = `${globalThis.origin}/api/resume/`
+  private static _instance: API | null = null
+
+  private constructor() {}
+
+  static get Instance() {
+    this._instance ??= new API()
+
+    return this._instance
+  }
 
   async get<T>(url: UrlPath): Promise<T> {
     return fetch(this.__baseUrl + url, {
