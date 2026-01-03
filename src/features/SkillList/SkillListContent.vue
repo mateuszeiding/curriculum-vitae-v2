@@ -9,11 +9,7 @@ defineProps<{
   <div class="d-flex flex-column gap-5">
     <div v-for="g in groups" :key="g.name">
       <div class="fs-lg text-center uppercase fw-medium border-bottom pb-2">{{ g.name }}</div>
-      <div
-        v-for="s in g.skills.sort((a, b) => (a.name > b.name ? 1 : 0))"
-        :key="s.name"
-        class="pt-2 pb-3"
-      >
+      <div v-for="s in g.SkillsAsc" :key="s.name" class="pt-2 pb-3">
         <div class="d-flex justify-content-between">
           <a v-if="s.link" :href="s.link" target="_blank" class="fs-sm uppercase fw-medium">{{
             s.name

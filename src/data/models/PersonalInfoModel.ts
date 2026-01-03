@@ -4,13 +4,26 @@ type Language = {
 }
 
 export class PersonalInfoModel {
-  public name: string = 'Mateusz Eiding'
-  public phone?: string = import.meta.env.VITE_PHONE
-  public email?: string = import.meta.env.VITE_EMAIL
-  public location: string = 'Poland, Szczecin'
-  public languages: Language[] = []
+  name: string = 'Mateusz Eiding'
+  phone?: string = import.meta.env.VITE_PHONE
+  email?: string = import.meta.env.VITE_EMAIL
+  location: string = 'Poland, Szczecin'
+  languages: Language[] = []
 
-  public constructor(obj: Partial<PersonalInfoModel>) {
+  constructor(obj: Partial<PersonalInfoModel>) {
     Object.assign(this, obj)
+  }
+
+  get EmailHref() {
+    if (!this.email) return undefined
+
+    return `mailto:${this.email}`
+  }
+
+  get PhoneHref() {
+    if (!this.phone) return undefined
+    const normalized = this.phone?.replaceAll(' ', '').replaceAll('-', '')
+
+    return `tel:${normalized}`
   }
 }

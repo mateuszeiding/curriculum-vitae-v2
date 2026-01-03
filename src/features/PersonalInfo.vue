@@ -2,8 +2,6 @@
 import { PersonalInfoModel } from '@models/PersonalInfoModel'
 
 const personalInfo = new PersonalInfoModel({})
-const email = personalInfo.email
-const phone = personalInfo.phone
 </script>
 <template>
   <div class="d-flex flex-column gap-2">
@@ -11,13 +9,13 @@ const phone = personalInfo.phone
       <div className="uppercase fw-medium fs-xxl">{{ personalInfo.name }}</div>
       <div>{{ personalInfo.location }}</div>
     </div>
-    <a v-if="email" className="fw-medium fs-xs" :href="`mailto:${email}`">{{
+    <a v-if="personalInfo.email" className="fw-medium fs-xs" :href="personalInfo.EmailHref">{{
       personalInfo.email
     }}</a>
     <a
-      v-if="phone"
+      v-if="personalInfo.phone"
       className="uppercase fw-medium fs-xs"
-      :href="`tel:${phone.replaceAll(' ', '').replaceAll('-', '')}`"
+      :href="personalInfo.PhoneHref"
       >{{ personalInfo.phone }}</a
     >
   </div>

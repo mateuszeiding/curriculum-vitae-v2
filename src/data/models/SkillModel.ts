@@ -17,4 +17,8 @@ export class SkillGroupModel {
   constructor(obj: Partial<SkillGroupModel>) {
     Object.assign(this, obj)
   }
+
+  get SkillsAsc() {
+    return this.skills.sort((a, b) => (a.name > b.name ? 1 : -1))
+  }
 }

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { BulletPointModel } from '@models/ExperienceModel'
+import type { BulletPointModel } from '@models/BulletPointModel'
 import { computed } from 'vue'
 
 const props = defineProps<{
@@ -13,7 +13,7 @@ const parts = computed(() => {
   if (!words.length) return [{ text, bold: false, key: 0 }]
 
   const escaped = words
-    .map((w) => w.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'))
+    .map((w) => w.replaceAll(/[.*+?^${}()|[\]\\]/g, String.raw`\$&`))
     .sort((a, b) => b.length - a.length)
 
   const regex = new RegExp(`(${escaped.join('|')})`, 'gi')
