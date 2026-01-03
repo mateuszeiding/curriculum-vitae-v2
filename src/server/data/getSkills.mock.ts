@@ -1,6 +1,6 @@
-import type { SkillGroupModel } from '@data/models/SkillModel'
+import type { ISkillGroupModel } from '@data/models/SkillModel'
 
-export const getSkills: SkillGroupModel[] = [
+export const getSkills: ISkillGroupModel[] = [
   {
     name: 'Frontend Development',
     skills: [

@@ -10,7 +10,12 @@ export class SkillModel {
   }
 }
 
-export class SkillGroupModel {
+export interface ISkillGroupModel {
+  name: string
+  skills: SkillModel[]
+}
+
+export class SkillGroupModel implements ISkillGroupModel {
   name: string = ''
   skills: SkillModel[] = []
 
