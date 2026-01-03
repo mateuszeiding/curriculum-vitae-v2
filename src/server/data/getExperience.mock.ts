@@ -9,12 +9,17 @@ export const getExperience: ExperienceModel[] = [
     bulletPoints: [
       {
         value: `Implemented an abstract class-based configuration model extended by multiple
-        specific types, with type guards ensuring safe type narrowing and dynamic form
-        rendering`,
+        specific types, with type guards ensuring safe type narrowing and dynamic form rendering`,
+        emphasis: [
+          'abstract class-based configuration model',
+          'safe type narrowing',
+          'dynamic form rendering',
+        ],
       },
       {
         value: `Implemented validation logic preventing overlapping dose configurations with
         different recurrence patterns and timeslots`,
+        emphasis: ['validation', 'preventing overlapping', 'different recurrence patterns'],
       },
     ],
   },
@@ -26,12 +31,15 @@ export const getExperience: ExperienceModel[] = [
       {
         value: `Guided frontend interns in everyday development tasks and code reviews
         to improve code quality and consistency`,
+        emphasis: ['Guided frontend interns', 'code reviews', 'code quality', 'consistency'],
       },
       {
         value: `Ensured alignment between design and frontend during implementation`,
+        emphasis: ['alignment between design and frontend'],
       },
       {
         value: `Helped design interns understand how layout and spacing decisions affect implementation`,
+        emphasis: ['design', 'decisions affect implementation'],
       },
     ],
   },
@@ -42,15 +50,18 @@ export const getExperience: ExperienceModel[] = [
     reusability across projects.`,
     bulletPoints: [
       {
-        value: `Implemented a design system on top of Bootstrap and developed reusable
-        components using Stencil.js`,
+        value: `Implemented a design system on top of Bootstrap and developed reusable components
+        using Stencil.js`,
+        emphasis: ['Implemented a design system', 'reusable components'],
       },
       {
         value: 'Supported other teams during migration to the new system',
+        emphasis: ['Supported other teams'],
       },
       {
         value: `Delivered biweekly updates on project progress through Teams posts and
         department meetings.`,
+        emphasis: ['biweekly updates'],
       },
     ],
   },
@@ -61,16 +72,19 @@ export const getExperience: ExperienceModel[] = [
     integrated with a legacy application.`,
     bulletPoints: [
       {
-        value: `Implemented a feature for managing access rights within a deeply nested
-        organizational structure`,
+        value: `Implemented a feature for managing access rights within a
+        deeply nested organizational structure`,
+        emphasis: ['deeply nested organizational structure'],
       },
       {
         value: `Simplified backend service handling by introducing a unified service manager
         for multiple data sources`,
+        emphasis: ['Simplified backend service', 'unified service manager'],
       },
       {
         value: `Refactored API endpoints and DTOs to improve consistency, reduce duplication
         and simplify integration logic`,
+        emphasis: ['Refactored', 'consistency', 'reduce duplication', 'simplify integration'],
       },
     ],
   },
@@ -81,13 +95,20 @@ export const getExperience: ExperienceModel[] = [
     task management, status updates and comments.`,
     bulletPoints: [
       {
-        value: `Took ownership of the frontend and improved both UI and UX in collaboration
-        with the PO and designer`,
+        value: `Took ownership of the frontend and improved both UI and UX in
+        collaboration with the PO and designer`,
+        emphasis: ['collaboration with the PO and designer'],
       },
       {
         value: `Refactored the existing codebase to simplify state flow using React Router
         Data APIs and reduce prop drilling, resulting in ~30% less code and improved
         long-term maintainability`,
+        emphasis: [
+          'Refactored',
+          'simplify state flow',
+          '~30% less code',
+          'long-term maintainability',
+        ],
       },
     ],
   },
