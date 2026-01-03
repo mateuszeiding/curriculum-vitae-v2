@@ -15,7 +15,7 @@ const { handlePrint } = useVueToPrint({
 })
 </script>
 <template>
-  <button class="d-print-none print-button" @click="handlePrint">
+  <button class="d-print-none print-button" title="print" @click="handlePrint">
     <img :height="24" alt="print" :src="printerIcon" />
   </button>
 </template>

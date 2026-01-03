@@ -67,7 +67,13 @@ const imgHeight = Number.parseFloat(getComputedStyle(document.documentElement).f
     </div>
     <div class="fs-xs d-flex flex-row gap-4 justify-content-start">
       <div v-for="l in links" :key="l.text">
-        <a :href="l.href" target="_blank" className="d-flex align-items-center" rel="noreferrer">
+        <a
+          :href="l.href"
+          target="_blank"
+          className="d-flex align-items-center"
+          :title="l.imgAlt"
+          rel="noreferrer"
+        >
           <img :height="imgHeight" :alt="l.imgAlt" :src="l.imgSrc" />
         </a>
       </div>
