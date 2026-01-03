@@ -1,0 +1,18 @@
+@use 'sass:map';
+@use 'sass:color';
+@use 'sass:meta';
+
+@function hex-to-rgb($color) {
+  @return #{color.channel($color, 'red', $space: rgb), color.channel($color, 'green', $space: rgb),
+    color.channel($color, 'red', $space: rgb)};
+}
+
+@function map-merge-all($maps...) {
+  $out: ();
+  @each $m in $maps {
+    @if $m != null and meta.type-of($m) == 'map' {
+      $out: map.merge($out, $m);
+    }
+  }
+  @return $out;
+}

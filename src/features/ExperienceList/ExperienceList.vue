@@ -1,18 +1,14 @@
 <script lang="ts" setup>
+import AwaitContent from '@components/AwaitContent.vue'
 import { API } from '@data/API'
-import { ExperienceModel } from '@models/ExperienceModel'
-import { onMounted, ref } from 'vue'
-import EmphasizeText from './cmp/EmphasizeText.vue'
+import type { ExperienceModel } from '@data/models/ExperienceModel'
+import ExperienceListContent from './ExperienceListContent.vue'
+import ExperienceListSkeleton from './ExperienceListSkeleton.vue'
 
 const api = new API()
-
-const experience = ref<ExperienceModel[]>([])
-
-onMounted(async () => {
-  const response = await api.get<ExperienceModel[]>('experience/list')
-
-  experience.value = response
-})
+const dataSource: Record<keyof PropsOf<typeof ExperienceListContent>, MaybePromise<unknown>> = {
+  experience: api.get<ExperienceModel[]>('experience/list'),
+}
 </script>
 <template>
   <div>
@@ -24,23 +20,11 @@ onMounted(async () => {
       <div class="position border-bottom">Software Engineer</div>
     </div>
 
-    <div class="border-end py-4 d-flex flex-column gap-2 pe-4">
-      <div v-for="exp in experience" :key="exp.project">
-        <div class="d-flex justify-content-between align-items-center">
-          <h3 class="fs-md">{{ exp.project }}</h3>
-          <!-- Yes, I know, this separator is beautiful, I'm not proud of it tho -->
-          <div class="d-flex fs-xs">
-            {{ exp.techStack.join('&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;') }}
-          </div>
-        </div>
-        <div class="fs-xs">{{ exp.description }}</div>
-        <ul class="py-2">
-          <li v-for="bulletPoint in exp.bulletPoints" :key="bulletPoint.value">
-            <EmphasizeText :bullet-point />
-          </li>
-        </ul>
-      </div>
-    </div>
+    <AwaitContent
+      :data-source
+      :content="ExperienceListContent"
+      :skeleton="ExperienceListSkeleton"
+    />
 
     <div class="text-end">
       <div class="position border-end border-bottom">Junior Software Engineer</div>

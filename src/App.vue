@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import PersonalInfo from './features/PersonalInfo.vue'
-import SkillList from './features/SkillList.vue'
+import SkillList from './features/SkillList/SkillList.vue'
 import ExperienceList from './features/ExperienceList/ExperienceList.vue'
 import MyLinks from '@components/MyLinks.vue'
 </script>

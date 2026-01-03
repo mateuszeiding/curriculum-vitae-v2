@@ -1,16 +1,9 @@
 <script lang="ts" setup>
-import { API } from '@data/API'
 import { SkillGroupModel } from '@models/SkillModel'
-import { onMounted, ref } from 'vue'
 
-const api = new API()
-const groups = ref<SkillGroupModel[]>([])
-
-onMounted(async () => {
-  const result = await api.get<SkillGroupModel[]>('skill/list')
-
-  groups.value = result
-})
+defineProps<{
+  groups: SkillGroupModel[]
+}>()
 </script>
 <template>
   <div class="d-flex flex-column gap-5">

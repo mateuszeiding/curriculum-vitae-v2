@@ -1,6 +1,4 @@
-@use 'sass:map';
-@use 'sass:color';
-@use 'sass:meta';
+@use './../functions' as fn;
 
 $gray-000: #f8f8ff;
 $gray-500: #8c8caa;
@@ -62,33 +60,12 @@ $purples: (
   purple-000: $purple-000,
 );
 
-@function hex-to-rgb($color) {
-  @return rgb(
-    color.channel($color, 'red', $space: rgb),
-    color.channel($color, 'green', $space: rgb),
-    color.channel($color, 'red', $space: rgb)
-  );
-}
-
-@function map-merge-all($maps...) {
-  $out: ();
-  @each $m in $maps {
-    @if $m != null and meta.type-of($m) == 'map' {
-      $out: map.merge($out, $m);
-    }
-  }
-  @return $out;
-}
-
-$colors: map-merge-all($grays, $blues, $greens, $reds, $golds, $purples);
+$colors: fn.map-merge-all($grays, $blues, $greens, $reds, $golds, $purples);
 
 :root {
   @each $name, $color in $colors {
     --color-#{$name}: #{$color};
   }
-
-  --color-skeleton-primary: #{rgba(hex-to-rgb($gray-500), 0.1)};
-  --color-skeleton-secondary: #{rgba(hex-to-rgb($blue-500), 0.1)};
 
   --color-paper-bg: #{$gray-000};
 

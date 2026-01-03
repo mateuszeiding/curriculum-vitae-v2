@@ -1,22 +1,48 @@
+@use './../config/colors' as colors;
+@use './../functions' as fn;
+
 .skeleton {
-  content: '';
+  display: inline-block;
+  border-radius: 0.2rem;
   height: 1em;
-  border-radius: 50rem;
-  background: linear-gradient(
-    90deg,
-    var(--color-skeleton-primary) 20%,
-    var(--color-skeleton-secondary) 50%,
-    var(--color-skeleton-primary) 80%
-  );
-  background-size: 200% 100%;
-  animation: skeleton-loading 1.5s infinite ease-in-out;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  background-color: rgba(var(--color-skeleton-bg), 0.1);
+
+  &::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform: translateX(-100%);
+    background-image: linear-gradient(
+      90deg,
+      rgba(var(--color-skeleton), 0) 0,
+      rgba(var(--color-skeleton), 0.2) 20%,
+      rgba(var(--color-skeleton), 0.5) 60%,
+      rgba(var(--color-skeleton), 0)
+    );
+    animation: shimmer var(--skeleton-animation-duration) infinite;
+    content: '';
+  }
+
+  @keyframes shimmer {
+    100% {
+      transform: translateX(100%);
+    }
+  }
 }
 
-@keyframes skeleton-loading {
-  0% {
-    background-position: 200% 0;
-  }
-  100% {
-    background-position: -200% 0;
+:root {
+  --color-skeleton-bg: #{fn.hex-to-rgb(colors.$gray-500)};
+  --color-skeleton: #{fn.hex-to-rgb(colors.$gray-500)};
+
+  --skeleton-animation-duration: 3s;
+
+  aside {
+    --color-skeleton-bg: #{fn.hex-to-rgb(colors.$gray-000)};
+    --color-skeleton: #{fn.hex-to-rgb(colors.$gray-000)};
   }
 }

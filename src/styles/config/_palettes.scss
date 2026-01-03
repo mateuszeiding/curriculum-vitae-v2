@@ -1,0 +1,16 @@
+@use 'sass:string' as string;
+
+@use './colors' as colors;
+@use './../functions' as fn;
+
+:root {
+  $palettes: 'gray', 'gold', 'red', 'blue', 'green', 'purple';
+
+  @each $p in $palettes {
+    $name: string.unquote($p);
+    &[data-palette='#{$name}'] {
+      --list-symbol-color: var(--color-#{$name}-500);
+      --personal-info-bg-color: var(--color-#{$name}-500);
+    }
+  }
+}
