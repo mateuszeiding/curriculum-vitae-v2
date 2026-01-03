@@ -1,11 +1,11 @@
-type UrlPath = 'skill/list' | 'experience/list'
+import { API_ENDPOINT_INFO_MAP } from './API_ENDPOINT_INFO_MAP'
+
+export type UrlPath = 'skill/list' | 'experience/list'
 
 export class API {
-  private readonly __baseUrl = `${window.origin}/api/resume/`
+  private readonly __baseUrl = `${globalThis.origin}/api/resume/`
 
-  public constructor() {}
-
-  public async get<T>(url: UrlPath): Promise<T> {
+  async get<T>(url: UrlPath): Promise<T> {
     return fetch(this.__baseUrl + url, {
       method: 'GET',
       headers: {
@@ -18,7 +18,14 @@ export class API {
 
       const data = await response.json()
 
-      return JSON.parse(JSON.stringify(data), this.__dateParser) as T
+      const parsed = JSON.parse(JSON.stringify(data), this.__dateParser)
+
+      const ctor = API_ENDPOINT_INFO_MAP[url].returnModel
+      if (Array.isArray(parsed)) {
+        return parsed.map((v) => new ctor(v)) as T
+      }
+
+      return new ctor(parsed) as T
     })
   }
 
