@@ -15,11 +15,13 @@ const printRef = ref<HTMLDivElement>()
         <aside class="col-lg-4 col-sm-12 col-print-4 d-flex flex-column row-gap-5 personal-info">
           <PersonalInfo />
           <SkillList class="flex-grow-1" />
-          <PrintButton v-if="printRef" :print-ref />
         </aside>
         <section class="col-lg-8 col-sm-12 col-print-8 d-flex flex-column">
           <ExperienceList class="flex-grow-1" />
-          <MyLinks />
+          <div class="d-flex justify-content-between align-items-end">
+            <MyLinks />
+            <PrintButton v-if="printRef" :print-ref />
+          </div>
         </section>
       </div>
     </main>
