@@ -24,6 +24,7 @@ $columns: 12;
 
 @include media-query.sm() {
   .container {
+    width: 100%;
     height: fit-content;
   }
 }
