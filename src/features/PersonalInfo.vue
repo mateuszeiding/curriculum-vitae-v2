@@ -6,17 +6,14 @@ const personalInfo = new PersonalInfoModel({})
 <template>
   <div class="d-flex flex-column gap-2">
     <div>
-      <div className="uppercase fw-medium fs-xxl">{{ personalInfo.name }}</div>
+      <div class="uppercase fw-medium fs-xxl">{{ personalInfo.name }}</div>
       <div>{{ personalInfo.location }}</div>
     </div>
-    <a v-if="personalInfo.email" className="fw-medium fs-xs" :href="personalInfo.EmailHref">{{
+    <a v-if="personalInfo.email" class="fw-medium fs-xs" :href="personalInfo.EmailHref">{{
       personalInfo.email
     }}</a>
-    <a
-      v-if="personalInfo.phone"
-      className="uppercase fw-medium fs-xs"
-      :href="personalInfo.PhoneHref"
-      >{{ personalInfo.phone }}</a
-    >
+    <a v-if="personalInfo.phone" class="uppercase fw-medium fs-xs" :href="personalInfo.PhoneHref">{{
+      personalInfo.phone
+    }}</a>
   </div>
 </template>

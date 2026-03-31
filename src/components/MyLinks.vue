@@ -70,7 +70,7 @@ const imgHeight = Number.parseFloat(getComputedStyle(document.documentElement).f
         <a
           :href="l.href"
           target="_blank"
-          className="d-flex align-items-center"
+          class="d-flex align-items-center"
           :title="l.imgAlt"
           rel="noreferrer"
         >

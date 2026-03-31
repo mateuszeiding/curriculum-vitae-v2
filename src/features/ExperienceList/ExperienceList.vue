@@ -12,7 +12,7 @@ const dataSource: Record<keyof PropsOf<typeof ExperienceListContent>, MaybePromi
 </script>
 <template>
   <div>
-    <div className=" d-flex justify-content-between align-items-end">
+    <div class="d-flex justify-content-between align-items-end">
       <div class="uppercase">
         <div class="fs-xxl fw-medium">TietoEvry</div>
         <div>07/2021 - Current</div>

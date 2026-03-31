@@ -11,6 +11,9 @@ importers:
       '@vercel/analytics':
         specifier: ^1.5.0
         version: 1.5.0(vue@3.5.22(typescript@5.9.2))
+      html2pdf:
+        specifier: ^0.0.11
+        version: 0.0.11
       msw:
         specifier: ^2.11.3
         version: 2.11.3(@types/node@22.18.7)(typescript@5.9.2)
@@ -1309,6 +1312,9 @@ packages:
 
   hookable@5.5.3:
     resolution: {integrity: sha512-Yc+BQe8SvoXH1643Qez1zqLRmbA5rCL+sSmk6TVos0LWVfNIB7PGncdlId77WzLGSIB5KaWgTaNTs2lNVEI6VQ==}
+
+  html2pdf@0.0.11:
+    resolution: {integrity: sha512-Kx3I5r7lazHZzZv5lDk59jQoTxqaEGlf2BcGNvzWGPQVu0hE8jYCk4hboksuaCvmMJPa0S0A+156ZbE71Wdo2w==}
 
   human-signals@8.0.1:
     resolution: {integrity: sha512-eKCa6bwnJhvxj14kZk5NCPc6Hb6BdsU9DZcOnmQKSnO1VKrfV0zCvtttPZUsBvjmNDn8rpcJfpwSYnHBjc95MQ==}
@@ -3393,6 +3399,8 @@ snapshots:
   headers-polyfill@4.0.3: {}
 
   hookable@5.5.3: {}
+
+  html2pdf@0.0.11: {}
 
   human-signals@8.0.1: {}
 

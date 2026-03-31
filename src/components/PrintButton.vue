@@ -1,12 +1,21 @@
 <script lang="ts" setup>
+import { computed } from 'vue'
 import printerIcon from '@assets/printer.png'
+import { useVueToPrint } from 'vue-to-print'
 
-const print = () => {
-  globalThis.print()
-}
+const props = defineProps<{
+  printRef: HTMLDivElement
+}>()
+
+const printRef = computed(() => props.printRef)
+
+const { handlePrint } = useVueToPrint({
+  content: printRef,
+  documentTitle: 'Mateusz Eiding - Resume',
+})
 </script>
 <template>
-  <button class="d-print-none print-button" title="print" @click="print">
+  <button class="d-print-none print-button" title="print" @click="handlePrint">
     <img :height="24" alt="print" :src="printerIcon" />
   </button>
 </template>
