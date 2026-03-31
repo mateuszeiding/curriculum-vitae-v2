@@ -8,12 +8,14 @@ export const getExperience: ExperienceModel[] = [
       'Group of modules for nurses designed to help manage medications and prescriptions.',
     bulletPoints: [
       {
-        value: `Implemented an abstract class-based configuration model extended by multiple
-        specific types, with type guards ensuring safe type narrowing and dynamic form rendering`,
+        value: `Designed a polymorphic dosage configuration model where each scheduling variant
+        owns its form initialization, validation schema and contract mapping - driving
+        dynamic form rendering and reactive variant switching based on observed field changes`,
         emphasis: [
-          'abstract class-based configuration model',
-          'safe type narrowing',
+          'polymorphic dosage configuration model',
+          'form initialization, validation schema, and contract mapping',
           'dynamic form rendering',
+          'reactive variant switching',
         ],
       },
       {
@@ -89,7 +91,7 @@ export const getExperience: ExperienceModel[] = [
     ],
   },
   {
-    project: 'Collaboration tool',
+    project: 'Collaboration Tool',
     techStack: ['React', '.NET', 'Angular'],
     description: `Module supporting employee cooperation through group assignments,
     task management, status updates and comments.`,
@@ -113,7 +115,7 @@ export const getExperience: ExperienceModel[] = [
     ],
   },
   {
-    project: 'open API',
+    project: 'External Integration API',
     techStack: ['.NET'],
     description: `An integration API that enables customers to use modules and applications
     provided by multiple third-party vendors.`,

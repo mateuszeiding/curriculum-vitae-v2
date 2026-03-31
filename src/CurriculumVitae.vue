@@ -43,6 +43,10 @@ const printRef = ref<HTMLDivElement>()
 }
 
 @media print {
+  .print-wrapper {
+    margin: 0;
+  }
+
   @page {
     size: A4;
     margin: 0;
