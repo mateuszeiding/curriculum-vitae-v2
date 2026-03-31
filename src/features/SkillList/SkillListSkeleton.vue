@@ -2,7 +2,7 @@
   <div class="d-flex flex-column gap-5">
     <div>
       <div class="fs-lg text-center uppercase fw-medium border-bottom pb-2">
-        <div class="skeleton" />
+        <div class="skeleton d-block" />
       </div>
       <div v-for="n in 2" :key="n" class="pt-2 pb-3">
         <div class="d-flex justify-content-between">

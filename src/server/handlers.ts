@@ -2,7 +2,7 @@ import { http, HttpResponse, type HttpResponseInit, delay } from 'msw'
 import { getExperience } from './data/getExperience.mock'
 import { getSkills } from './data/getSkills.mock'
 
-const delayResponse = () => delay(Math.floor(Math.random() * (1500 - 500 + 1)) + 500)
+const delayResponse = () => delay(500)
 
 const getJsonInit: HttpResponseInit = {
   headers: {

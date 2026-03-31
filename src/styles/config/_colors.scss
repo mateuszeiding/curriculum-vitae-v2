@@ -8,22 +8,6 @@ $blue-900: #1e3c52;
 $blue-500: #2c5977;
 $blue-000: #c7d6e2;
 
-$green-900: #3f5e4c;
-$green-500: #5e8a73;
-$green-000: #c0d1c4;
-
-$red-900: #6b2330;
-$red-500: #8e4a58;
-$red-000: #e3c6cb;
-
-$gold-900: #6f614b;
-$gold-500: #b8a45b;
-$gold-000: #e7debf;
-
-$purple-900: #43305a;
-$purple-500: #6b5b8d;
-$purple-000: #c9beda;
-
 $grays: (
   gray-900: $gray-900,
   gray-500: $gray-500,
@@ -36,31 +20,7 @@ $blues: (
   blue-000: $blue-000,
 );
 
-$greens: (
-  green-900: $green-900,
-  green-500: $green-500,
-  green-000: $green-000,
-);
-
-$reds: (
-  red-900: $red-900,
-  red-500: $red-500,
-  red-000: $red-000,
-);
-
-$golds: (
-  gold-900: $gold-900,
-  gold-500: $gold-500,
-  gold-000: $gold-000,
-);
-
-$purples: (
-  purple-900: $purple-900,
-  purple-500: $purple-500,
-  purple-000: $purple-000,
-);
-
-$colors: fn.map-merge-all($grays, $blues, $greens, $reds, $golds, $purples);
+$colors: fn.map-merge-all($grays, $blues);
 
 :root {
   @each $name, $color in $colors {
@@ -68,6 +28,8 @@ $colors: fn.map-merge-all($grays, $blues, $greens, $reds, $golds, $purples);
   }
 
   --color-paper-bg: #{$gray-000};
+  --list-symbol-color: var(--color-blue-500);
+  --personal-info-bg-color: var(--color-blue-500);
 
   @media print {
     --color-paper-bg: white;

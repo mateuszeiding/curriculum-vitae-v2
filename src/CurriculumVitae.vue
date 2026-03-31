@@ -12,13 +12,15 @@ const printRef = ref<HTMLDivElement>()
   <div ref="printRef" class="print-wrapper">
     <main class="container bg-paper d-flex flex-column">
       <div class="row h-100">
-        <aside class="col-lg-4 col-sm-12 col-print-4 d-flex flex-column row-gap-5 personal-info">
+        <aside
+          class="col-lg-4 col-sm-12 col-print-4 d-flex flex-column row-gap-5 personal-info flex-1"
+        >
           <PersonalInfo />
           <SkillList class="flex-grow-1" />
         </aside>
         <section class="col-lg-8 col-sm-12 col-print-8 d-flex flex-column">
           <ExperienceList class="flex-grow-1" />
-          <div class="d-flex justify-content-between align-items-end">
+          <div class="d-flex d-print-none justify-content-between align-items-end">
             <MyLinks />
             <PrintButton v-if="printRef" :print-ref />
           </div>
@@ -35,5 +37,45 @@ const printRef = ref<HTMLDivElement>()
 
 .print-wrapper {
   margin: auto;
+}
+
+@media print {
+  #app,
+  .print-wrapper,
+  body,
+  main {
+    margin: 0;
+    padding: 0;
+    width: 210mm;
+    height: 297mm;
+  }
+  .container {
+    margin: 0;
+    width: 210mm;
+    height: 297mm;
+  }
+
+  .print-wrapper {
+    display: block;
+    margin: 0;
+  }
+
+  @page {
+    size: A4;
+    margin: 0;
+
+    @bottom-center {
+      content: none;
+    }
+    @bottom-left {
+      content: none;
+    }
+    @bottom-right {
+      content: none;
+    }
+    @top-center {
+      content: none;
+    }
+  }
 }
 </style>

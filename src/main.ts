@@ -11,12 +11,8 @@ async function prepareWorker() {
 
   return worker.start()
 }
-const app = createApp(App)
 
-const palette = ['gray', 'gold', 'red', 'blue', 'green', 'purple'] as const
-const index = (Math.random() * palette.length) | 0
-const currentPalette = palette[index]
-document.documentElement.setAttribute('data-palette', currentPalette ?? palette[0])
+const app = createApp(App)
 
 prepareWorker().then(() => {
   app.mount('#app')
