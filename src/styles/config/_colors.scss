@@ -30,10 +30,6 @@ $colors: fn.map-merge-all($grays, $blues);
   --color-paper-bg: #{$gray-000};
   --list-symbol-color: var(--color-blue-500);
   --personal-info-bg-color: var(--color-blue-500);
-
-  @media print {
-    --color-paper-bg: white;
-  }
 }
 
 @each $name, $color in $colors {

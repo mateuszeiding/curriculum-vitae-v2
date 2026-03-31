@@ -16,8 +16,8 @@ export const getSkills: ISkillGroupModel[] = [
       },
       {
         name: 'Vue',
-        level: 2,
-        list: ['Vue Router', 'Vee-validate', 'pinia'],
+        level: 3,
+        list: ['Vue Router', 'Vee-validate', 'pinia', 'composables'],
       },
       {
         name: 'Angular 12+',

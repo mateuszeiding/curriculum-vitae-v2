@@ -16,6 +16,11 @@ defineProps<{
           }}</a>
           <div v-else class="fs-sm uppercase fw-medium">{{ s.name }}</div>
           <div class="d-flex column-gap-2">
+            <template v-if="s.level">
+              <span v-for="level in 4 - (s.level ?? 0)" :key="level" class="fs-lg lh-1 tx-gray-500"
+                >{{ '\u2022' }}
+              </span>
+            </template>
             <span v-for="level in s.level" :key="level" class="fs-lg lh-1">{{ '\u2022' }} </span>
           </div>
         </div>
